@@ -1,0 +1,305 @@
+body {
+    font-family: 'Nunito';
+    background: #F2F2F2;
+}
+
+
+/* HEADER */
+
+header {
+    font-family: 'Poppins', sans-serif;
+}
+
+header .navbar {
+    padding: 20px 10px;
+}
+
+header .items-menu {
+    width: 100%;
+}
+
+header .items-menu ul {
+    margin-left: 450px;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+
+header .items-menu ul .btn-login {
+    background: #08018F;
+    color: #fff;
+    border-radius: 25px;
+}
+
+
+/* MAIN */
+
+main .imagen {
+    background-image: url("img/index/1.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    width: 100%;
+}
+
+main .imagen .contenedor-items {
+    margin-left: 950px;
+    width: 30%;
+    height: 900px;
+    text-align: center;
+    margin-top: 200px;
+}
+
+main .imagen .contenedor-items .textos {
+    color: #181640;
+    font-size: 18px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+}
+
+
+/* Efecto Marcatextos */
+
+.highlight-container,
+.highlight {
+    position: relative;
+}
+
+.highlight-container {
+    display: inline-block;
+}
+
+.highlight-container:before {
+    content: " ";
+    display: block;
+    height: 90%;
+    width: 100%;
+    margin-left: -3px;
+    margin-right: -3px;
+    position: absolute;
+    background: rgba(234, 221, 6, 0.3);
+    transform: rotate(2deg);
+    top: -1px;
+    left: -1px;
+    border-radius: 20% 25% 20% 24%;
+    padding: 10px 3px 3px 10px;
+}
+
+.highlight-container2,
+.highlight2 {
+    position: relative;
+}
+
+.highlight-container2 {
+    display: inline-block;
+}
+
+.highlight-container2:before {
+    content: " ";
+    display: block;
+    height: 90%;
+    width: 100%;
+    margin-left: -3px;
+    margin-right: -3px;
+    position: absolute;
+    background: rgba(6, 234, 6, 0.3);
+    transform: rotate(2deg);
+    top: -1px;
+    left: -1px;
+    border-radius: 20% 25% 20% 24%;
+    padding: 10px 3px 6px 10px;
+}
+
+main .imagen .btn-signup {
+    background: #FDA2DA;
+    color: #08018F;
+    border-radius: 25px;
+    font-family: 'Poppins';
+    font-weight: 1000;
+    padding: 10px 30px;
+}
+
+main .acerca-de {
+    padding: 60px;
+}
+
+main .acerca-de .contenedor-items {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+main .acerca-de .contenedor-items .textos {
+    color: #08018F;
+    width: 50%;
+}
+
+main .acerca-de .contenedor-items .ef1 {
+    width: 150px;
+    height: 150px;
+    margin-top: -100px;
+}
+
+main .acerca-de .contenedor-items .ef2 {
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+}
+
+main .acerca-de .vector {
+    width: 220px;
+    height: 220px;
+    margin-top: -20px;
+    margin-left: 1100px;
+}
+
+
+/* CARDS */
+
+main .cards {
+    background: #181640;
+    padding: 30px;
+}
+
+main .cards .titulo {
+    margin-top: 80px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    font-weight: 1000;
+    font-family: 'Poppins';
+    color: #756EFF;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Acomodo imagenes */
+
+main .cards .birr1 {
+    width: 220px;
+    z-index: 0;
+    margin-top: -150px;
+    margin-left: 500px;
+}
+
+main .cards .birr2 {
+    width: 150px;
+    z-index: 0;
+    margin-top: -200px;
+    margin-left: 200px;
+}
+
+main .cards .birr3 {
+    width: 100px;
+    z-index: 0;
+    margin-top: -300px;
+    margin-left: 1300px;
+}
+
+main .cards .mano1 {
+    width: 1000px;
+    margin-top: -120px;
+    z-index: 0;
+}
+
+main .cards .linea1 {
+    margin-top: -600px;
+    margin-left: 500px;
+    width: 200px;
+    z-index: 0;
+}
+
+main .cards .linea2 {
+    margin-top: -300px;
+    margin-left: 900px;
+    width: 200px;
+    z-index: 0;
+}
+
+
+/* Estilos Card Individual */
+
+main .cards .card {
+    background: #5C5C63;
+    border-radius: 25px;
+    font-family: 'Nunito';
+    width: 25%;
+    position: relative;
+    z-index: 1;
+    margin-left: 20px;
+}
+
+main .cards .card .card-title {
+    color: #fff;
+    font-weight: 1000;
+    text-align: center;
+}
+
+main .cards .card .subtitle {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 1000;
+    margin: 0;
+}
+
+main .cards .card .subtitle2 {
+    color: #fff;
+    font-weight: 1000;
+    font-size: 18px;
+    margin: 0;
+}
+
+main .cards .card .et-morada {
+    padding: 5px;
+    background: #C09AF3;
+    border-radius: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+main .cards .card .fechas-conv {
+    margin-top: 20px;
+}
+
+main .cards .card .et-verde {
+    padding: 5px;
+    background: #9AF3A0;
+    border-radius: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+main .cards .card .et-roja {
+    padding: 5px;
+    background: #F57979;
+    border-radius: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+main .cards .card .card-img {
+    width: 130px;
+    margin-top: 15px;
+}
+
+main .cards .becas-dest {
+    margin-bottom: 200px;
+}
+
+main .cards .becas-dest .t-becas {
+    color: #FDA2DA;
+}
+
+footer {
+    height: 300px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+}
