@@ -1,6 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<?php
+//<!DOCTYPE html><html lang="en">
+include("conecta.php");
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -61,8 +62,8 @@
                     <i class="fas fa-search"></i>
                     <input type="text">
                 </div>
-                
-                
+
+
                 <select class="form-control">
                     <option>Default select</option>
                 </select>
@@ -80,30 +81,43 @@
                 <div class="col-12">
                     <div class="container cont-cards">
                         <div class="row mt-3 justify-content-center">
-                            <div class="card mr-3 mb-3">
-                                <div class="card-body">
-                                    <h5 class="card-title">Instituto Politecnico Nacional</h5>
-                                    <div class="row">
-                                        <div class="col-6 img-cont">
-                                            <img class="card-img" src="./img/index/ipn.png" alt="">
+                          <?php
+                          $sqld="SELECT * FROM convocatoria_universidad;";
+                          if ($resultado = $mysqli->query($sqld)) {}
+                          $arreglomamon;$bandera=0;
+                          foreach ($resultado as $key) {
+                            $arreglomamon[$bandera]=$key;
+
+                          echo '
+                                <div class="card mr-3 mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">'.$arreglomamon[$bandera]['nombre'].'</h5>
+                                        <div class="row">
+                                            <div class="col-6 img-cont">
+                                                <img class="card-img" src="'.$arreglomamon[$bandera]['logo'].'" alt="">
+                                            </div>
+                                            <div class="col-6">
+                                                <p class="subtitle">Financiamiento:</p>
+                                                <div class="financiamiento et-morada">'.$arreglomamon[$bandera]['estado'].'</div>
+                                                <p class="subtitle">Estado:</p>
+                                                <div class="estado et-morada">'.$arreglomamon[$bandera]['lugar'].'</div>
+                                            </div>
                                         </div>
-                                        <div class="col-6">
-                                            <p class="subtitle">Financiamiento:</p>
-                                            <div class="financiamiento et-morada">Publica</div>
-                                            <p class='subtitle'>Estado:</p>
-                                            <div class="estado et-morada">CDMX</div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12 fechas-conv">
-                                            <p class="subtitle2">Inicio de convocatoria:</p>
-                                            <div class="inicio et-verde">23-05-2021</div>
-                                            <p class='subtitle2'>Fin de convocatoria:</p>
-                                            <div class="fin et-roja">20-06-2021</div>
+                                        <div class="row">
+                                            <div class="col-12 fechas-conv">
+                                                <p class="subtitle2">Inicio de convocatoria:</p>
+                                                <div class="inicio et-verde">'.$arreglomamon[$bandera]['fecha_inicio'].'</div>
+                                                <p class="subtitle2">Fin de convocatoria:</p>
+                                                <div class="fin et-roja">'.$arreglomamon[$bandera]['fecha_fin'].'</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            ';
+
+                            $bandera=$bandera+1;
+                              }
+                          ?>
                         </div>
                     </div>
                 </div>

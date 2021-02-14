@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+//<!DOCTYPE html><html lang="en">
+include("conecta.php");
+?>
+
 
 <head>
     <meta charset="UTF-8">
@@ -61,8 +64,8 @@
                     <i class="fas fa-search"></i>
                     <input type="text">
                 </div>
-                
-                
+
+
                 <select class="form-control">
                     <option>Default select</option>
                 </select>
@@ -74,29 +77,41 @@
             <h5 class="textos">Para llegar a darlo todo en el examen, aquí tienes algunos</h5>
             <h1 class="titulo">recursos de estudio</h1>
             <h5 class="texto">Guarda los que más te sirvan usando un 🧡 </h5>
-        </section>     
+        </section>
 
         <section class="cards">
             <div class="row">
                 <div class="col-12">
                     <div class="container cont-cards">
                          <div class="row mt-3 justify-content-center">
-                            <div class="card mr-3 mb-3">
-                                <div class="card-body">
-                                    <h5 class="card-title">Curso de algebra basica</h5>
-                                    <div class="row">
-                                        <div class="col-6 img-cont">
-                                            <img class="card-img" src="./img/index/ipn.png" alt="">
-                                        </div>
-                                        <div class="col-6">
-                                            <p class="subtitle">Impartido por:</p>
-                                            <div class="et-morada">Coursera</div>
-                                            <p class='subtitle'>Costo:</p>
-                                            <div class="et-morada">Gratuito</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                           <?php
+                           $sqld="SELECT * FROM herramienta;";
+                           if ($resultado = $mysqli->query($sqld)) {}
+                             $arreglomamon;$bandera=0;
+                             foreach ($resultado as $key) {
+                               $arreglomamon[$bandera]=$key;
+
+                               echo'<div class="card mr-3 mb-3">
+                                   <div class="card-body">
+                                       <h5 class="card-title">'.$arreglomamon[$bandera]['nombre'].'</h5>
+                                       <div class="row">
+                                           <div class="col-6 img-cont">
+                                               <img class="card-img" src="'.$arreglomamon[$bandera]['logo'].'" alt="">
+                                           </div>
+                                           <div class="col-6">
+                                               <p class="subtitle">Impartido por:</p>
+                                               <div class="et-morada">'.$arreglomamon[$bandera]['impartidor'].'</div>
+                                               <p class="subtitle">Costo:</p>
+                                               <div class="et-morada">'.$arreglomamon[$bandera]['costo'].'</div>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>';
+
+                               $bandera=$bandera+1;
+                             }
+                           ?>
+
                         </div>
                     </div>
                 </div>
