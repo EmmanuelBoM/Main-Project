@@ -1,4 +1,4 @@
-# estuo
+# [estuo]
 A web app to reduce Mexican college students' dropouts due to lack of financial resources or universities which fulfill their needs and expectations. How? Mere networking and virtual self-tracking!
 
 ## What it does
