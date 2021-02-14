@@ -27,7 +27,7 @@ header .items-menu ul {
     justify-content: space-around;
 }
 
-header .items-menu ul .btn-login {
+header .items-menu ul .btn-login-header {
     background: #08018F;
     color: #fff;
     border-radius: 25px;
@@ -84,7 +84,7 @@ main .container .formulario .signup-field {
     margin-bottom: 20px;
 }
 
-main .container .formulario .btn-signup {
+main .container .formulario .btn-login {
     border-style: none;
     background: #756EFF;
     color: #fff;
@@ -95,7 +95,7 @@ main .container .formulario .btn-signup {
     margin-bottom: 20px;
 }
 
-main .container .formulario .btn-signup-google {
+main .container .formulario .btn-login-google {
     border-style: none;
     background: #C990FC;
     color: #fff;
@@ -106,7 +106,7 @@ main .container .formulario .btn-signup-google {
     margin-bottom: 20px;
 }
 
-main .container .formulario .btn-signup-google img {
+main .container .formulario .btn-login-google img {
     width: 25px;
     margin-left: 10px;
 }

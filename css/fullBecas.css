@@ -16,10 +16,15 @@ header .navbar {
     color: #2F2F30;
 }
 
-header .items-menu {
-    width: 100%;
-    color: #2F2F30;
-}
+
+header .navbar img{
+    width: 150px;
+    margin-left: 30px;
+ }
+ 
+ header .items-menu {
+     width: 90%;
+ }
 
 header .items-menu ul {
     margin-left: 450px;

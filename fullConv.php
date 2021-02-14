@@ -1,6 +1,7 @@
 <?php
 //<!DOCTYPE html><html lang="en">
 include("conecta.php");
+$listaEstados='';
 ?>
 <head>
     <meta charset="UTF-8">
@@ -12,14 +13,14 @@ include("conecta.php");
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Nunito+Sans:ital@1&family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f9e8b427c6.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/fullConv.css">
+    <link rel="stylesheet" href="./css/fullConv.css?v=<?php echo time(); ?>">
     <title>Todas las convocatorias</title>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">Logo</a>
+        <img src="./img/logo1.png" alt="" class="logo">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -38,9 +39,10 @@ include("conecta.php");
                         Ingreso a Universidad
                       </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="./fullConv.php">Convocatorias de ingreso</a>
-                                <a class="dropdown-item" href="./fullRecursos.php">Recursos de aprendizaje</a>
+                                <a class="dropdown-item" href="./fullConv.php?listaEstados=">Convocatorias de ingreso</a>
                                 <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="./fullRecursos.php">Recursos de aprendizaje</a>
+                                
                             </div>
                         </li>
                         <li class="nav-item">
@@ -64,8 +66,21 @@ include("conecta.php");
                 </div>
 
 
-                <select class="form-control">
-                    <option>Default select</option>
+               <?php
+                echo"<form class='formulario' action='fullConv.php'>
+                <select class='form-control' name='listaEstados'>";
+
+                  $sqld1="SELECT * FROM lugares;";
+
+                  if ($res = $mysqli->query($sqld1)) {}
+                  $arreglomamon1;$bandera=0;
+                  foreach ($res as $key) {
+                    $arreglomamon1[$bandera]=$key;
+                    echo '<option>'.$arreglomamon1[$bandera]['estado'].'</option>';
+                    $bandera=$bandera+1;
+                      }
+                   ?>
+                   <input class='btn-consulta' type="submit" value="Enviar">
                 </select>
             </div>
         </section>
@@ -82,7 +97,14 @@ include("conecta.php");
                     <div class="container cont-cards">
                         <div class="row mt-3 justify-content-center">
                           <?php
-                          $sqld="SELECT * FROM convocatoria_universidad;";
+                          $listaEstados=$_GET['listaEstados'];
+                          if ($listaEstados=='') {
+                            $sqld="SELECT * FROM convocatoria_universidad;";
+                          }else {
+                            $sqld="SELECT * FROM convocatoria_universidad where lugar like '$listaEstados';";
+                          }
+
+                
                           if ($resultado = $mysqli->query($sqld)) {}
                           $arreglomamon;$bandera=0;
                           foreach ($resultado as $key) {
@@ -98,7 +120,7 @@ include("conecta.php");
                                             </div>
                                             <div class="col-6">
                                                 <p class="subtitle">Financiamiento:</p>
-                                                <div class="financiamiento et-morada">'.$arreglomamon[$bandera]['estado'].'</div>
+                                                <div class="financiamiento et-morada">'.$arreglomamon[$bandera]['tipo'].'</div>
                                                 <p class="subtitle">Estado:</p>
                                                 <div class="estado et-morada">'.$arreglomamon[$bandera]['lugar'].'</div>
                                             </div>

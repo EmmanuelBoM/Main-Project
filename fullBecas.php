@@ -14,14 +14,14 @@ include("conecta.php");
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Nunito+Sans:ital@1&family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f9e8b427c6.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/fullBecas.css">
+    <link rel="stylesheet" href="./css/fullBecas.css?v=<?php echo time(); ?>">
     <title>Todas las becas</title>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">Logo</a>
+        <img src="./img/logo1.png" alt="" class="logo">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -40,13 +40,14 @@ include("conecta.php");
                         Ingreso a Universidad
                       </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="./fullConv.php">Convocatorias de ingreso</a>
-                                <a class="dropdown-item" href="./fullRecursos.php">Recursos de aprendizake</a>
+                                <a class="dropdown-item" href="./fullConv.php?listaEstados=">Convocatorias de ingreso</a>
                                 <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="./fullRecursos.php">Recursos de aprendizake</a>
+                               
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./fullBeca.php">Busca una beca</a>
+                            <a class="nav-link" href="./fullBecas.php">Busca una beca</a>
                         </li>
 
 
@@ -64,11 +65,6 @@ include("conecta.php");
                     <i class="fas fa-search"></i>
                     <input type="text">
                 </div>
-
-
-                <select class="form-control">
-                    <option>Default select</option>
-                </select>
             </div>
         </section>
 
@@ -86,7 +82,9 @@ include("conecta.php");
                         <div class="row mt-3 justify-content-center">
 
                           <?php
-                          $sqld="SELECT * FROM beca;";
+
+                    
+                       $sqld="SELECT * FROM beca;";
                           if ($resultado = $mysqli->query($sqld)) {}
                             $arreglomamon;$bandera=0;
                             foreach ($resultado as $key) {

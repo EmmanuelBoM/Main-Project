@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Nunito+Sans:ital@1&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/login.css">
-    <title>Document</title>
+    <title>Inicio de sesión</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
      
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Logo</a>
+            <img src="./img/logo1.png" alt="" class="logo">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -38,7 +38,7 @@
                         Ingreso a Universidad
                       </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="./fullConv.php">Convocatorias de ingreso</a>
+                                <a class="dropdown-item" href="./fullConv.php?listaEstados=">Convocatorias de ingreso</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="./fullRecursos.php">Rescursos de aprendizake</a>
                             </div>
@@ -48,7 +48,7 @@
                         </li>
 
 
-                        <button class="btn btn-login" type="submit">Iniciar sesión</button>
+                        <button class="btn btn-login-header" type="submit">Iniciar sesión</button>
                     </ul>
                 </div>
 
@@ -72,16 +72,19 @@
 
                 <div class="col-4">
                     <div class="formulario">
-                        <input type="email" class=" signup-field" placeholder="Correo electrónico">
-                        <input type="password" class="signup-field" placeholder="Contraseña">
-                        <input type="Button" class="btn-signup" value="Iniciar sesión">
-                        <Button class="btn-signup-google">Iniciar sesión con  <img src="./img/SignUp/logo-google.png" alt=""></Button>
+                        <input type="email" id="signin-email" class=" signup-field" placeholder="Correo electrónico">
+                        <input type="password" id="signin-password" class="signup-field" placeholder="Contraseña">
+                        <button  id = "login-btn" class="btn btn-primary btn-login">Iniciar Sesion</button>
+                        <button class="btn-login-google">Iniciar sesión con  <img src="./img/SignUp/logo-google.png" alt=""></button>
                     </div>
                 </div>
             </div>
         </div>
         <img src="./img/SignUp/IniciodeSesión.png" alt="" class="vector">
     </main>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase.js"></script>
+    <script src="./js/login.js" ></script>
 </body>
 
 </html>

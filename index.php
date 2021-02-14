@@ -14,14 +14,14 @@ include("conecta.php");
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Nunito+Sans:ital@1&family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/index.css">
-    <title>[Proyecto]</title>
+    <link rel="stylesheet" href="./css/index.css?v=<?php echo time(); ?>">
+    <title>Estuo</title>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light ">
-            <a class="navbar-brand" href="#">Logo</a>
+        <img src="./img/logo1.png" alt="" class="logo">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -40,7 +40,7 @@ include("conecta.php");
                         Ingreso a Universidad
                       </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="./fullConv.php">Convocatorias de ingreso</a>
+                                <a class="dropdown-item" href="./fullConv.php?listaEstados=">Convocatorias de ingreso</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="./fullRecursos.php">Rescursos de aprendizaje</a>
                             </div>
@@ -78,9 +78,9 @@ include("conecta.php");
             <div class="contenedor-items">
                 <img src="./img/index/3.1.png" alt="" class="ef1">
                 <div class="textos">
-                    <h3 class="l1">En [PROYECTO], creemos que un buen comienzo para disminuir la brecha educativa en México es acercar a las personas a las oportunidades de su vida.</h3>
-                    <p class="l2">Entérate aquí de cuál será tu siguiente paso.</p>
-                    <p class="l3">Estudia, viaja, prepárate.</p>
+                    <h3 class="l1">En <b>estuo</b>, creemos que un buen comienzo para disminuir la brecha educativa en México es acercar a las personas a las oportunidades de su vida.</h3>
+                    <h5 class="l2">Entérate aquí de cuál será tu siguiente paso.</h5>
+                    <h5 class="l3">Estudia, viaja, prepárate.</h5>
                 </div>
                 <img src="./img/index/3.2.png" alt="" class="ef2">
             </div>
@@ -99,7 +99,7 @@ include("conecta.php");
                     <div class="container cont-cards">
                       <div class="row mt-3 justify-content-center">
                       <?php
-                      $sqld="SELECT * FROM convocatoria_universidad;";
+                      $sqld="SELECT * FROM convocatoria_universidad LIMIT 3;";
                       if ($resultado = $mysqli->query($sqld)) {}
                       $arreglomamon;$bandera=0;
                       foreach ($resultado as $key) {

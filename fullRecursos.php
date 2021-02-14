@@ -14,14 +14,14 @@ include("conecta.php");
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Nunito+Sans:ital@1&family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f9e8b427c6.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/fullRecursos.css">
+    <link rel="stylesheet" href="./css/fullRecursos.css?v=<?php echo time(); ?>">
     <title>Todos los recursos</title>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">Logo</a>
+        <img src="./img/logo1.png" alt="" class="logo">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -40,9 +40,10 @@ include("conecta.php");
                         Ingreso a Universidad
                       </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="./fullConv.php">Convocatorias de ingreso</a>
-                                <a class="dropdown-item" href="./fullRecursos.php">Recursos de aprendizaje</a>
+                                <a class="dropdown-item" href="./fullConv.php?listaEstados=">Convocatorias de ingreso</a>
                                 <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="./fullRecursos.php">Recursos de aprendizaje</a>
+                                
                             </div>
                         </li>
                         <li class="nav-item">
@@ -65,10 +66,6 @@ include("conecta.php");
                     <input type="text">
                 </div>
 
-
-                <select class="form-control">
-                    <option>Default select</option>
-                </select>
             </div>
         </section>
 

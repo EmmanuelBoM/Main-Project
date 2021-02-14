@@ -10,12 +10,19 @@ header {
     font-family: 'Poppins', sans-serif;
 }
 
+
 header .navbar {
-    padding: 20px 10px;
+    padding: 0px 10px;
+}
+
+
+header .navbar img{
+   width: 150px;
+   margin-left: 30px;
 }
 
 header .items-menu {
-    width: 100%;
+    width: 90%;
 }
 
 header .items-menu ul {
@@ -138,6 +145,20 @@ main .acerca-de .contenedor-items .textos {
     width: 50%;
 }
 
+main .acerca-de .contenedor-items .textos .l2{
+    margin-top: 50px;
+    color: #000;
+}
+
+
+main .acerca-de .contenedor-items .textos .l3{
+    margin-top: 50px;
+    color: #756EFF;
+    font-family: 'Poppins';
+    font-weight: 1000;
+    font-size: 35px;
+}
+
 main .acerca-de .contenedor-items .ef1 {
     width: 150px;
     height: 150px;
@@ -189,25 +210,25 @@ main .cards .birr1 {
 main .cards .birr2 {
     width: 150px;
     z-index: 0;
-    margin-top: -200px;
+    margin-top: -170px;
     margin-left: 200px;
 }
 
 main .cards .birr3 {
     width: 100px;
     z-index: 0;
-    margin-top: -300px;
+    margin-top: -200px;
     margin-left: 1300px;
 }
 
 main .cards .mano1 {
     width: 1000px;
-    margin-top: -120px;
+    margin-top: -150px;
     z-index: 0;
 }
 
 main .cards .linea1 {
-    margin-top: -600px;
+    margin-top: -300px;
     margin-left: 500px;
     width: 200px;
     z-index: 0;
@@ -215,7 +236,7 @@ main .cards .linea1 {
 
 main .cards .linea2 {
     margin-top: -300px;
-    margin-left: 900px;
+    margin-left: 800px;
     width: 200px;
     z-index: 0;
 }
