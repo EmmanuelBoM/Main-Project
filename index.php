@@ -20,7 +20,7 @@ include("conecta.php");
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light ">
             <a class="navbar-brand" href="#">Logo</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -30,27 +30,27 @@ include("conecta.php");
                 <div class="items-menu">
                     <ul class="navbar-nav ">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="./index.php">Inicio <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Acerca de</a>
+                            <a class="nav-link" href="#acerca-de">Acerca de</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Ingreso a Universidad
                       </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Convocatorias de ingreso</a>
-                                <a class="dropdown-item" href="#">Rescursos de aprendizake</a>
+                                <a class="dropdown-item" href="./fullConv.php">Convocatorias de ingreso</a>
                                 <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="./fullRecursos.php">Rescursos de aprendizaje</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Busca una beca</a>
+                            <a class="nav-link" href="./fullBecas.php">Busca una beca</a>
                         </li>
 
 
-                        <button class="btn btn-login" type="submit">Iniciar sesión</button>
+                        <button  id = "btn-login" class="btn btn-login" type="submit">Iniciar sesión</button>
                     </ul>
                 </div>
 
@@ -61,8 +61,8 @@ include("conecta.php");
     </header>
 
     <main>
-        <section class="imagen">
 
+        <section class="imagen">
             <div class="contenedor-items">
                 <div class="textos">
                     <h1>¿Cuál será tu siguiente<span class="highlight-container"><span class="highlight">gran aventura?</span></span>
@@ -70,11 +70,11 @@ include("conecta.php");
                     <p>Ha llegado el momento de que valga la pena <span class="highlight-container2">todo el esfuerzo<span class="highlight2"></span></span> que has hecho!</p>
 
                 </div>
-                <button class="btn btn-signup">Comienza Aqui</button>
+                <button id = "btn-signup" class="btn btn-signup">Comienza Aqui</button>
             </div>
         </section>
 
-        <section class="acerca-de">
+        <section id = "acerca-de" class="acerca-de">
             <div class="contenedor-items">
                 <img src="./img/index/3.1.png" alt="" class="ef1">
                 <div class="textos">
@@ -212,6 +212,8 @@ include("conecta.php");
             </div>
         </div>
     </footer>
+
+    <script src='./js/index.js' language='javascript'></script>
 </body>
 
 </html>
