@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+//<!DOCTYPE html><html lang="en">
+include("conecta.php");
+?>
+
 
 <head>
     <meta charset="UTF-8">
@@ -21,7 +24,7 @@
             <a class="navbar-brand" href="#">Logo</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
-            </button> 
+            </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="items-menu">
@@ -61,8 +64,8 @@
                     <i class="fas fa-search"></i>
                     <input type="text">
                 </div>
-                
-                
+
+
                 <select class="form-control">
                     <option>Default select</option>
                 </select>
@@ -82,33 +85,47 @@
                     <div class="container cont-cards">
                         <div class="row mt-3 justify-content-center">
 
-                            <div class="card mr-3 mb-3">
-                                <div class="card-body">
-                                    <h5 class="card-title">Lideres del mañana</h5>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <img class="card-img" src="/img/index/LogoLideresAzul.jpg" alt="">
-                                        </div>
-                                        <div class="col-6">
-                                            <p class="subtitle">La otorga:</p>
-                                            <div class="et-morada">Publica</div>
-                                            <p class='subtitle'>Durante:</p>
-                                            <div class="et-morada">Una carrera universitaria</div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12 fechas-conv">
-                                            <p class="subtitle2">Inicio de convocatoria:</p>
-                                            <div class="inicio et-verde">23-05-2021</div>
-                                            <p class='subtitle2'>Fin de convocatoria:</p>
-                                            <div class="fin et-roja">20-06-2021</div>
-                                            <p class='subtitle2'>Monto:</p>
-                                            <div class="et-morada">Costo total de la colegiatura</div>
-                                        </div>
-                                    </div>
+                          <?php
+                          $sqld="SELECT * FROM beca;";
+                          if ($resultado = $mysqli->query($sqld)) {}
+                            $arreglomamon;$bandera=0;
+                            foreach ($resultado as $key) {
+                              $arreglomamon[$bandera]=$key;
 
-                                </div>
-                            </div>
+                              echo'<div class="card mr-3 mb-3">
+                                  <div class="card-body">
+                                      <h5 class="card-title">'.$arreglomamon[$bandera]['nombre'].'</h5>
+                                      <div class="row">
+                                          <div class="col-6">
+                                              <img class="card-img" src="'.$arreglomamon[$bandera]['logo'].'" alt="">
+                                          </div>
+                                          <div class="col-6">
+                                              <p class="subtitle">La otorga:</p>
+                                              <div class="et-morada">'.$arreglomamon[$bandera]['patrocinador'].'</div>
+                                              <p class="subtitle">Durante:</p>
+                                              <div class="et-morada">'.$arreglomamon[$bandera]['duracion'].'</div>
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col-12 fechas-conv">
+                                              <p class="subtitle2">Inicio de convocatoria:</p>
+                                              <div class="inicio et-verde">'.$arreglomamon[$bandera]['fecha_inicio'].'</div>
+                                              <p class="subtitle2">Fin de convocatoria:</p>
+                                              <div class="fin et-roja">'.$arreglomamon[$bandera]['fecha_fin'].'</div>
+                                              <p class="subtitle2">Monto:</p>
+                                              <div class="et-morada">'.$arreglomamon[$bandera]['descripcion'].'</div>
+                                          </div>
+                                      </div>
+
+                                  </div>
+                              </div>';
+
+                              $bandera=$bandera+1;
+                            }
+
+
+                            ?>
+
 
                         </div>
                     </div>
