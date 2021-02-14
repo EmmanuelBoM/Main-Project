@@ -1,5 +1,5 @@
 <?php
-//<!DOCTYPE html><html lang="en">
+//<!DOCTYPE html><html lang="en"> trader_cdlupsidegap2crows
 include("conecta.php");
 ?>
 
