@@ -1,7 +1,7 @@
 <?php
 include("conecta.php");
 //<!DOCTYPE html><html lang="en">
-//xd
+
   ?>
 
 
